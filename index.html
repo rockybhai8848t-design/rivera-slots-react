@@ -1,80 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Rivera Slots</title>
-
-<style>
-
-body{
-background:black;
-color:white;
-font-family:Arial;
-text-align:center;
-}
-
-.logo{
-margin-top:40px;
-}
-
-.logo img{
-width:220px;
-}
-
-h1{
-color:gold;
-font-size:50px;
-}
-
-button{
-background:gold;
-border:none;
-padding:15px 30px;
-font-size:18px;
-margin:10px;
-cursor:pointer;
-}
-
-.section{
-margin-top:50px;
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rivera Slots</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <div class="brand">
+        <div class="brand-logo">R</div>
+        <div>
+          <h1>Rivera Slots</h1>
+          <p>Where Every Spin Is A Wave Of Fortune</p>
+        </div>
+      </div>
+    </div>
 
-<div class="logo">
-<img src="logo.png">
-</div>
+    <div class="top-actions">
+      <button class="top-btn" id="openLogin">Login</button>
+      <button class="top-btn signup-btn" id="openSignup">Sign up</button>
+    </div>
+  </header>
 
-<h1>RIVERA SLOTS</h1>
+  <aside class="side-menu" id="sideMenu">
+    <a href="#home">Home</a>
+    <a href="#games">Games</a>
+    <a href="#bonuses">Bonuses</a>
+    <a href="#payments">Payments</a>
+    <a href="#support">Support</a>
+  </aside>
 
-<p>Where Every Spin Is A Wave Of Fortune</p>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-card">
+        <span class="tag">Rivera Slots Official</span>
+        <h2>Popular Games & Rewards</h2>
+        <p>
+          Join players enjoying our gaming-style platform, account access,
+          bonus offers, and smooth mobile experience.
+        </p>
+        <div class="hero-buttons">
+          <button class="main-btn" id="heroSignup">Sign up</button>
+          <button class="main-btn alt-btn" id="heroBonus">View Bonuses</button>
+        </div>
+      </div>
+    </section>
 
-<button>REGISTER</button>
-<button>LOGIN</button>
+    <section class="section" id="games">
+      <div class="section-head">
+        <h3>Popular Games</h3>
+        <p>Clean modern layout inspired by the style you showed.</p>
+      </div>
 
-<div class="section">
+      <div class="game-grid">
+        <div class="game-card">
+          <div class="game-image"></div>
+          <h4>Lucky Spins</h4>
+          <p>Fast-paced spin action and smooth mobile design.</p>
+        </div>
 
-<h2>🔥 BONUSES</h2>
+        <div class="game-card">
+          <div class="game-image"></div>
+          <h4>Golden Fortune</h4>
+          <p>Premium look with bold colors and bonus-ready layout.</p>
+        </div>
 
-<p>100% Sign Up Bonus</p>
-<p>50% Referral Bonus</p>
-<p>20% Regular Bonus</p>
-<p>$5 Free Play</p>
+        <div class="game-card">
+          <div class="game-image"></div>
+          <h4>Rivera Classic</h4>
+          <p>Simple and stylish cards for your future game listings.</p>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section class="section" id="bonuses">
+      <div class="section-head">
+        <h3>Bonuses</h3>
+        <p>Players can click here to view your bonus offers clearly.</p>
+      </div>
 
-<div class="section">
+      <div class="bonus-grid">
+        <div class="bonus-card">
+          <span>100%</span>
+          <h4>Sign Up Bonus</h4>
+          <p>Welcome offer for newly registered players.</p>
+        </div>
 
-<h2>💳 PAYMENT METHODS</h2>
+        <div class="bonus-card">
+          <span>50%</span>
+          <h4>Referral Bonus</h4>
+          <p>Invite friends and reward active referrals.</p>
+        </div>
 
-<p>Cash App</p>
-<p>Chime</p>
-<p>PayPal</p>
-<p>Venmo</p>
+        <div class="bonus-card">
+          <span>20%</span>
+          <h4>Regular Bonus</h4>
+          <p>Reward returning players and ongoing activity.</p>
+        </div>
 
-</div>
+        <div class="bonus-card">
+          <span>$5</span>
+          <h4>Free Play</h4>
+          <p>Starter play credit for new users.</p>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="payments">
+      <div class="section-head">
+        <h3>Payment Methods</h3>
+        <p>Show the methods you want users to know about.</p>
+      </div>
+
+      <div class="payment-list">
+        <div class="payment-item">Cash App</div>
+        <div class="payment-item">Chime</div>
+        <div class="payment-item">PayPal</div>
+        <div class="payment-item">Venmo</div>
+      </div>
+    </section>
+
+    <section class="section" id="support">
+      <div class="section-head">
+        <h3>Account Status</h3>
+        <p id="statusText">No user logged in.</p>
+      </div>
+      <div class="status-actions">
+        <button class="main-btn logout-btn" id="logoutBtn">Logout</button>
+      </div>
+    </section>
+  </main>
+
+
+<nav class="bottom-nav">
+    <a href="#home" class="nav-item active">Home</a>
+    <a href="#games" class="nav-item">Games</a>
+    <a href="#bonuses" class="nav-item">Bonuses</a>
+    <a href="#payments" class="nav-item">Payments</a>
+    <a href="#support" class="nav-item">Chat</a>
+  </nav>
+
+  <!-- Signup Modal -->
+  <div class="modal hidden" id="signupModal">
+    <div class="modal-box">
+      <button class="close-btn" data-close="signupModal">✕</button>
+      <h3>Create Account</h3>
+      <input type="text" id="signupName" placeholder="Full name" />
+      <input type="email" id="signupEmail" placeholder="Email" />
+      <input type="password" id="signupPassword" placeholder="Password" />
+      <button class="main-btn full-btn" id="signupBtn">Create Account</button>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal hidden" id="loginModal">
+    <div class="modal-box">
+      <button class="close-btn" data-close="loginModal">✕</button>
+      <h3>Login</h3>
+      <input type="email" id="loginEmail" placeholder="Email" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <button class="main-btn full-btn" id="loginBtn">Login</button>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
